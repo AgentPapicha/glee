@@ -94,6 +94,135 @@
 
 }
 
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #dae4e9;
+    margin-bottom: 20px;
+
+    &__logo {
+        margin-bottom: 26px;
+    }
+
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        width: 194px;
+        margin-right: 106px;
+    }
+
+    &__services {
+        width: 120px;
+        margin-right: 180px;
+    }
+
+    &__account {
+        width: 92px;
+        margin-right: 210px;
+    }
+
+    &__title {
+        @extend %dmsans-700;
+        font-size: 16px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: #1f2044;
+        margin-bottom: 26px;
+    }
+
+    &__link,
+    &__adress,
+    &__phone,
+    &__email,
+    &__text {
+        @extend %rubik-400;
+        color: #7b7b7b;
+        font-size: 14px;
+        line-height: 32px;
+    }
+
+    &__adress,
+    &__text {
+        line-height: 24px;
+    }
+
+    &__text {
+        width: 236px;
+        margin-bottom: 36px;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__form-input {
+        @extend %dmsans-400;
+        padding: 15px 0 15px 15px;
+        background-color: #fef7f0;
+        border: none;
+        max-width: 170px;
+        width: 100%;
+
+
+    }
+
+    &__form-input::placeholder {
+        font-size: 12px;
+        line-height: auto;
+        color: #234969;
+    }
+
+    &__form-btn {
+        @extend %dmsans-400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #ffffff;
+        border: none;
+        background-color: #a3bbc8;
+        padding: 12px 19px;
+        cursor: pointer;
+    }
+
+}
+
+.footer-bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__copy,
+    &__menu-link {
+        @extend %rubik-400;
+        color: #7b7b7b;
+        font-size: 14px;
+        line-height: 32px;
+    }
+
+    &__menu-link{
+        line-height: 16px;
+    }
+
+    &__menu {
+        display: flex;
+        list-style: none;
+    }
+
+    &__menu-item:first-child {
+        padding-right: 13px;
+    }
+
+
+    &__menu-item+.footer-bot__menu-item {
+        padding: 0 13px;
+        border-left: 1px solid #7b7b7b;
+    }
+
+
+
+}
+
 
 
 
