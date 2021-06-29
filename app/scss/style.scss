@@ -362,21 +362,45 @@
         margin-bottom: 80px;
     }
 
-&__cards{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px 30px;
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 40px 30px;
+    }
+
 }
 
+.product-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.product__btn{
+    font-size: 16px;
+    line-height: auto;
+    @extend %dmsans-700;
+    border: none;
+    background-color: transparent;
+    
+    color: #8b8b8b;
+    cursor: pointer;
+}
+
+.mixitup-control-active{
+    color: #1a1a1a;
+}
+
+.product__btn + .product__btn {
+    margin-left: 30px;
 }
 
 .product-card {
-    border: 1px solid green;
-    max-height: 380px;
+    border: 1px solid transparent;
+    height: 380px;
     width: 270px;
     text-align: center;
-    // align-content: center;
-
+    border-radius: 10px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
 
     &:hover {
         .product-card__link-box {
@@ -385,8 +409,10 @@
     }
 
     &__inner {
-        padding-top: 28px;
-        padding-bottom: 38px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 8px;
+        height: 380px;
     }
 
     &__img-box {
@@ -396,8 +422,8 @@
     }
 
     &__img-box img {
-        margin: 0 auto;
-        margin-bottom: 80px;
+        margin-left: auto;
+        margin-right: auto;
         object-fit: cover;
     }
 
@@ -406,7 +432,7 @@
         right: 0;
         margin: 0 auto;
         position: absolute;
-        bottom: 95px;
+        bottom: 20px;
         transform: translateY(700%);
         transition: all .3s;
     }
@@ -458,6 +484,8 @@
         font-size: 16px;
         line-height: 22px;
         margin-bottom: 8px;
+        margin-top: auto;
+
     }
 
     &__price {
@@ -469,6 +497,19 @@
 
 }
 
+
+
+.Rectangle_24 {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    position: absolute;
+    left: 375px;
+    top: 1368px;
+    width: 270px;
+    height: 380px;
+    z-index: 143;
+}
 
 
 

@@ -11,4 +11,7 @@ $(function () {
         autoplaySpeed: 2000
     });
 
+    var mixer = mixitup('.week-products__cards');
+
+
 });
