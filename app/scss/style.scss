@@ -304,6 +304,8 @@
 
 
 .about {
+    margin-bottom: 74px;
+
     &__wrapper {
         display: flex;
         justify-content: space-around;
@@ -343,44 +345,129 @@
 
 
         }
-
-
-
     }
 
 
 }
 
+.week-products {
+    margin-bottom: 90px;
 
+    &__title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
 
+    &__buttons {
+        margin-bottom: 80px;
+    }
 
-.Ellipse_1 {
-    border-radius: 50%;
-    background-color: rgb(163, 187, 200);
-    opacity: 0.341;
-    position: absolute;
-    left: 1432px;
-    top: 1044px;
-    width: 20px;
-    height: 20px;
-    z-index: 212;
+&__cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 30px;
 }
 
-
-
-
-.Rectangle_1 {
-    background-color: rgb(252, 215, 182);
-    opacity: 0.2;
-    position: absolute;
-    left: 75px;
-    top: 963px;
-    width: 1770px;
-    height: 171px;
-    z-index: 204;
 }
 
+.product-card {
+    border: 1px solid green;
+    max-height: 380px;
+    width: 270px;
+    text-align: center;
+    // align-content: center;
 
+
+    &:hover {
+        .product-card__link-box {
+            transform: translateY(0);
+        }
+    }
+
+    &__inner {
+        padding-top: 28px;
+        padding-bottom: 38px;
+    }
+
+    &__img-box {
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    &__img-box img {
+        margin: 0 auto;
+        margin-bottom: 80px;
+        object-fit: cover;
+    }
+
+    &__link-box {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 95px;
+        transform: translateY(700%);
+        transition: all .3s;
+    }
+
+    &__link {
+        background-color: #fff;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        transition: all .3s;
+
+        path {
+            transition: all .3s;
+        }
+    }
+
+    &__link:hover {
+        background-color: #a3bbc8;
+
+        path {
+            fill: #fff;
+        }
+    }
+
+    &__link-search {
+        padding: 13px 10px;
+    }
+
+    &__link-cart {
+        padding: 14px 10px;
+    }
+
+    &__link-heart {
+        padding: 14px 12px;
+    }
+
+    &__link-heart svg,
+    &__link-cart svg,
+    &__link-search svg {
+        transform: translateY(4px);
+    }
+
+    &__link+&__link {
+        margin-left: 16px;
+    }
+
+    &__title {
+        color: #243f4d;
+        @extend %dmsans-500;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 8px;
+    }
+
+    &__price {
+        color: #a3bbc8;
+        @extend %dmsans-700;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+}
 
 
 
