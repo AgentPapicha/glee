@@ -351,7 +351,7 @@
 }
 
 .week-products {
-    margin-bottom: 90px;
+    margin-bottom: 190px;
 
     &__title {
         text-align: center;
@@ -375,22 +375,22 @@
     justify-content: center;
 }
 
-.product__btn{
+.product__btn {
     font-size: 16px;
     line-height: auto;
     @extend %dmsans-700;
     border: none;
     background-color: transparent;
-    
+
     color: #8b8b8b;
     cursor: pointer;
 }
 
-.mixitup-control-active{
+.mixitup-control-active {
     color: #1a1a1a;
 }
 
-.product__btn + .product__btn {
+.product__btn+.product__btn {
     margin-left: 30px;
 }
 
@@ -499,16 +499,65 @@
 
 
 
-.Rectangle_24 {
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    position: absolute;
-    left: 375px;
-    top: 1368px;
-    width: 270px;
-    height: 380px;
-    z-index: 143;
+.lamps {
+
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+
+
+}
+
+.lamp-left,
+.lamp-right {
+    display: flex;
+    justify-content: space-between;
+    background-color: #feefe2;
+    padding-left: 140px;
+    padding-right: 146px;
+
+    img {
+        transform: translateY(-100px);
+        padding-right: 30px;
+
+    }
+
+    &__title {
+        margin-top: 100px;
+        margin-bottom: 20px;
+        color: #243f4d;
+        font-size: 26px;
+        line-height: 32px;
+        @extend %dmsans-700;
+    }
+
+    &__features {
+        max-width: 330px;
+        color: #243f4d;
+        font-size: 16px;
+        line-height: 30px;
+        @extend %rubik-400;
+        margin-bottom: 36px;
+    }
+
+    &__link {
+        @extend %rubik-500;
+        border: 1px solid rgba(67, 99, 114, .4);
+        border-radius: 5px;
+        font-size: 15px;
+        line-height: 18px;
+        color: #436372;
+        padding: 20px 19px;
+
+        span {
+            font-size: 20px;
+            padding-left: 45px;
+        }
+    }
 }
 
 

@@ -18,6 +18,12 @@ body{
     margin: 0 auto;
 }
 
+.big-container {
+    max-width: 1800px;
+    padding: 0 15px;
+    margin: 0 auto; 
+}
+
 .title{
     @extend %dmsans-700;
     font-size: 36px;
