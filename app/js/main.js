@@ -12,6 +12,7 @@ $(function () {
     });
 
     var mixer = mixitup('.week-products__cards');
+    var mixer = mixitup('.design__items');
 
 
 });
