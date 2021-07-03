@@ -602,4 +602,16 @@
 }
 
 
+.video-popup {
+    margin-bottom: 120px;
+
+&__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
+
 @import 'media';
