@@ -310,13 +310,46 @@
         display: flex;
         justify-content: space-around;
         margin: 0 75px;
-        padding: 45px 0;
+        padding: 34px 0;
         background-color: #fef7f0;
     }
 
     &__item {
         display: flex;
         align-items: center;
+        position: relative;
+        max-width: 300px;
+
+
+        &:nth-child(even) {
+
+            &::after {
+                content: url("../images/about-border.svg");
+                position: absolute;
+                width: 1px;
+                height: 170px;
+                left: -150px;
+                top: -35px;
+            }
+
+            p::before {
+                content: url("../images/about-border.svg");
+                position: absolute;
+                width: 1px;
+                height: 170px;
+                left: 440px;
+                top: -35px;
+            }
+        }
+
+        &::before {
+            content: url("../images/icons/circle-mini.svg");
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 36px;
+            bottom: 32px;
+        }
 
         &-img {
             margin-right: 30px;
@@ -328,13 +361,10 @@
         }
 
         &-title {
-
             @extend %dmsans-700;
             font-size: 18px;
             line-height: 40px;
             color: #414141;
-
-
         }
 
         &-text {
@@ -342,8 +372,6 @@
             font-size: 16px;
             line-height: 30px;
             color: #585858;
-
-
         }
     }
 
@@ -605,11 +633,11 @@
 .video-popup {
     margin-bottom: 120px;
 
-&__inner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 }
 
