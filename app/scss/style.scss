@@ -220,6 +220,25 @@
 
 }
 
+
+.page-name {
+    background-color: #edf1f4;
+
+    &__inner {
+        padding: 35px 0;
+    }
+
+    &__title {
+        @extend %rubik-400;
+        font-size: 36px;
+        color: #222933;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+}
+
+
 .top-slider {
     margin: 0 75px;
     background-color: #fcd7b6;
@@ -749,6 +768,79 @@
 
     }
 
+}
+
+.modal {
+    max-width: 480px;
+    margin: 116px auto 120px;
+
+    &__label {
+        @extend %rubik-400;
+        color: #436372;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        border: 2px solid #f6f6f6;
+        height: 54px;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+
+    &__btn-login {
+        font-size: 18px;
+        @extend %rubik-500;
+        background-color: #a3bbc8;
+        color: #fffefe;
+        padding: 20px 200px;
+        border: none;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+    &__lost {
+        display: flex;
+        justify-content: space-between;
+        @extend %rubik-500;
+        color: #436372;
+        font-size: 14px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid #f6f6f6;
+        margin-bottom: 30px;
+
+        a {
+            @extend %rubik-500;
+            color: #436372;
+            font-size: 14px;
+        }
+
+    }
+
+    &__register-question {
+        text-align: center;
+        @extend %rubik-500;
+        color: #436372;
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
+
+    &__create-acclink {
+        display: block;
+        font-size: 18px;
+        @extend %rubik-500;
+        color: #243f4d;
+        padding: 20px 142px;
+        border: 2px solid #a3bbc8;
+        margin-bottom: 120px;
+    }
+}
+
+.partners-block{
+    padding-top: 80px;
 }
 
 @import 'media';
