@@ -839,8 +839,44 @@
     }
 }
 
-.partners-block{
+.partners-block {
     padding-top: 80px;
+}
+
+.personal-info {
+    margin-top: 116px;
+    color: #243f4d;
+
+    &__title {
+        @extend %rubik-500;
+        font-size: 24px;
+        margin-bottom: 26px;
+    }
+
+    &__list {
+        margin: 0 0 70px 30px !important;
+    }
+
+    li {
+        @extend %rubik-400;
+        list-style-type: decimal-leading-zero;
+        font-size: 16px;
+
+    }
+
+    li+li {
+        margin-top: 30px;
+    }
+
+    p {
+        @extend %rubik-400;
+        font-size: 16px;
+    }
+
+    &__text {
+        margin-bottom: 66px;
+    }
+
 }
 
 @import 'media';
