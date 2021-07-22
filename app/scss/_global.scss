@@ -3,12 +3,12 @@ body {
     height: 100%;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
 }
 
-.main{
+.main {
     flex-grow: 1;
 }
 
@@ -21,12 +21,50 @@ body{
 .big-container {
     max-width: 1800px;
     padding: 0 15px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
-.title{
+.title {
     @extend %dmsans-700;
     font-size: 36px;
     line-height: auto;
     color: #191919;
+}
+
+.breadcrumbs {
+    @extend %rubik-400;
+    display: flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+justify-content: center;
+    }
+
+    &__item {
+        color: #83898f;
+        padding-right: 20px;
+        position: relative;
+
+        &::after {
+            content: url("../images/icons/slash.svg");
+            position: absolute;
+            right: 5px;
+            bottom: 1px;
+            width: 8px;
+            height: 16px;
+        }
+
+        &:last-child {
+            padding-right: 0;
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        color: inherit;
+    }
+
 }
