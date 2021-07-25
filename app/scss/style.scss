@@ -229,7 +229,7 @@
     }
 
     &__title {
-        @extend %rubik-400;
+        @extend %rubik-300;
         font-size: 36px;
         color: #222933;
         text-align: center;
@@ -877,6 +877,35 @@
         margin-bottom: 66px;
     }
 
+}
+
+.mission {
+    &__wrapper {
+        margin: 120px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__experience {
+        display: flex;
+        column-gap: 30px;
+        align-items: flex-end;
+
+        p:first-of-type {
+            @extend %rubik-700;
+            font-size: 140px;
+            color: #a3bbc8;
+        }
+
+        p+p {
+            transform: translateY(-28px);
+            @extend %rubik-400;
+            font-size: 16px;
+            line-height: 30px;
+            color: #243f4d;
+            max-width: 88px;
+        }
+    }
 }
 
 @import 'media';
