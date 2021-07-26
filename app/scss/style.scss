@@ -972,7 +972,43 @@
     }
 }
 
+.our-stats {
+    background-color: #fcd7b6;
+    margin-bottom: 120px;
 
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        flex-wrap: wrap;
+
+        img {
+            display: inline;
+            margin-bottom: 20px;
+        }
+
+        p {
+            @extend %dmsans-700;
+            font-size: 36px;
+            color: #243f4d;
+            margin-bottom: 14px;
+        }
+
+        h5 {
+            @extend %dmsans-700;
+            font-size: 18px;
+            color: #243f4d;
+        }
+    }
+
+    &__list-item {
+        padding: 84px 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 
 
 @import 'media';
