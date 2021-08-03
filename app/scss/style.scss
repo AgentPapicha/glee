@@ -156,7 +156,7 @@
 
     &__form-input {
         @extend %dmsans-400;
-        padding: 15px 0 15px 15px;
+        padding: 15px;
         background-color: #fef7f0;
         border: none;
         max-width: 170px;
@@ -504,11 +504,13 @@
     }
 
     &__link-cart {
-        padding: 14px 10px;
+        transform: translateY(4px);
+        padding: 10px 11px;
     }
 
     &__link-heart {
-        padding: 14px 12px;
+        padding: 11px;
+        transform: translateY(2px);
     }
 
     &__link-heart svg,
