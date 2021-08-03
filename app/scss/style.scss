@@ -1003,10 +1003,96 @@
 
     &__list-item {
         padding: 84px 0;
-        align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 200px;
+    }
+}
+
+.team {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 120px;
+    }
+
+    &__title {
+        @extend %dmsans-700;
+        font-size: 36px;
+        color: rgb(36, 63, 77);
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #243f4d;
+        max-width: 300px;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        font-size: 15px;
+        @extend %poppins-600;
+        background-color: #a3bbc8;
+        padding: 18px 25px 18px 18px;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+
+        span {
+            padding-left: 18px;
+            font-size: 20px;
+        }
+    }
+
+    &__members {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px 30px;
+
+    }
+
+    &__member {
+        height: 380px;
+    }
+
+    &__member-photo {
+        position: relative;
+    }
+
+    &__member-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        max-width: 320px;
+        width: 100%;
+        padding: 28px 21px 28px 24px;
+        transform: translateY(-53px);
+        background-color: #fff;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    }
+
+    &__member-name {
+        h4 {
+            font-size: 22px;
+            @extend %dmsans-700;
+            color: #436372;
+            margin-bottom: 12px;
+        }
+
+        p {
+            @extend %rubik-400;
+            font-size: 16px;
+            color: #565872;
+        }
+    }
+
+    &__member-instagramlink {
+        margin-right: 6px;
     }
 }
 
