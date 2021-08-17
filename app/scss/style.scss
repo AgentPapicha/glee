@@ -1098,5 +1098,64 @@
     }
 }
 
+.catalog {
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
+
+
+.filter {
+    &__title {
+        font-size: 18px;
+        color: #243f4d;
+        @extend %dmsans-700;
+        text-transform: uppercase;
+        margin-bottom: 26px;
+
+        &::after {
+            content: url('../images/icons/filter-title-line.svg');
+            margin-left: 16px;
+            bottom: 6px;
+            position: relative;
+        }
+    }
+
+    &__item {
+        width: 270px;
+    }
+}
+
+
+.filter-category {
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        padding-bottom: 10px;
+    }
+
+    &__text {
+        @extend %rubik-400;
+        font-size: 16px;
+        color: #243f4d;
+
+    }
+
+    &__input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden; 
+        clip: rect(0 0 0 0);
+        position: absolute;
+    }
+
+    &__chekbox{
+       background-image: url('../images/icons/angle-right.svg');
+       background-repeat: no-repeat;
+       background-position: 0 0; 
+    }
+
+}
+
 
 @import 'media';
