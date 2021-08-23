@@ -1122,6 +1122,7 @@
 
     &__item {
         width: 270px;
+        margin-bottom: 60px;
     }
 }
 
@@ -1130,8 +1131,17 @@
     &__label {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         cursor: pointer;
-        padding-bottom: 10px;
+        padding: 13px;
+        background-color: #fff;
+        border-radius: 5px;
+        transition: all .3s;
+    }
+
+    &__label--active {
+        background-color: rgba(163, 187, 200, .2);
+
     }
 
     &__text {
@@ -1144,18 +1154,87 @@
     &__input {
         width: 1px;
         height: 1px;
-        overflow: hidden; 
+        overflow: hidden;
         clip: rect(0 0 0 0);
         position: absolute;
+
+        &:checked+.filter-category__checkbox {
+            background-image: url('../images/icons/angle-right.svg');
+            width: 5px;
+            height: 10px;
+
+        }
+
+        &:checked {
+            .filter-category__input {
+
+                background-color: black;
+            }
+        }
     }
 
-    &__chekbox{
-       background-image: url('../images/icons/angle-right.svg');
-       background-repeat: no-repeat;
-       background-position: 0 0; 
+    &__checkbox {
+        background-image: url('../images/icons/angle-down.svg');
+        width: 10px;
+        height: 5px;
     }
 
 }
+
+.filter-price {
+    &__amount {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+        @extend %rubik-400;
+        color: #243f4d;
+        font-size: 14px;
+    }
+
+    &__from,
+    &__to {
+        &::before {
+            content: "$";
+        }
+    }
+}
+
+.irs-from, .irs-to {
+    display: none;
+}
+
+.irs--flat .irs-line {
+    top: 25px;
+    height: 3px;
+    background-color: #c2d2db;
+    border-radius: 4px;
+    opacity: 0.659;
+}
+
+.irs--flat .irs-bar {
+    top: 24px;
+    height: 5px;
+    background-color: #a3bbc8;
+}
+
+.irs--flat .irs-handle {
+    top: 19px;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(163, 187, 200);
+    cursor: pointer;
+}
+
+.irs--flat .irs-handle>i:first-child {
+    display: none;
+}
+
+
+.irs-min,
+.irs-max {
+    display: none;
+}
+
 
 
 @import 'media';
