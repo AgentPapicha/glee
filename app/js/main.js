@@ -1,9 +1,18 @@
 $(function () {
 
+
+    $(".star").rateYo({
+        rating: 3.6,
+        starWidth: "11px",
+        spacing: "8px",
+        ratedFill: "#ffcc00",
+      });
+
+
    $('.filter-price__input').ionRangeSlider({
     type: "double",
     prefix: "$",
-
+    
     onStart: function (data) {
         $('.filter-price__from').text(data.from);
         $('.filter-price__to').text(data.to); 

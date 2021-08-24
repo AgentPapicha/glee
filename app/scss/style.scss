@@ -1182,6 +1182,10 @@
 }
 
 .filter-price {
+    &__title {
+        margin-bottom: 0;
+    }
+
     &__amount {
         display: flex;
         justify-content: space-between;
@@ -1199,7 +1203,11 @@
     }
 }
 
-.irs-from, .irs-to {
+.irs-from,
+.irs-to,
+.irs-single,
+.irs-min,
+.irs-max {
     display: none;
 }
 
@@ -1229,10 +1237,84 @@
     display: none;
 }
 
+.filter-brand {
+    &__label {
+        cursor: pointer;
+    }
 
-.irs-min,
-.irs-max {
-    display: none;
+    &__input {
+        @extend %checkbox-hidden;
+
+        &:checked+.filter-brand__checkbox {
+            background-color: rgba(163, 187, 200, 0.2);
+
+            span {
+                color: #243f4d;
+            }
+        }
+    }
+
+    &__checkbox {
+        @extend %rubik-400;
+        font-size: 16px;
+        color: #243f4d;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 24px 12px 15px;
+        border-radius: 5px;
+
+        span+span {
+            color: #b3b3b3;
+        }
+    }
+}
+
+.recent-products__wrapper {}
+
+.recent-product {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    margin-bottom: 25px;
+
+    &__imglink {
+        height: 70px;
+        width: 70px;
+        border: 3px solid #f2f2f2;
+
+        img {
+            object-fit: cover;
+            padding: 2px 4px;
+            margin: 0 auto;
+        }
+    }
+
+
+
+    &__info {
+        @extend %rubik-400;
+        padding: 5px 0;
+        margin-right: auto;
+        max-width: 150px;
+        color: #333333;
+    }
+
+    &__title {
+        
+        font-size: 14px;
+        line-height: 16px;
+        color: inherit;
+        margin-bottom: 10px;
+        display: block;
+        padding: 0 5px;
+        
+    }
+
+    &__price {
+        font-size: 15px;
+        
+        padding: 7px 5px 0;
+    }
 }
 
 
