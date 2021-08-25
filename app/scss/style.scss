@@ -1269,11 +1269,10 @@
     }
 }
 
-.recent-products__wrapper {}
-
 .recent-product {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     column-gap: 20px;
     margin-bottom: 25px;
 
